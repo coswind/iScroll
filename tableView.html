@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>Test tableView</title>
+    <link rel="stylesheet" href="scroll.css">
+</head>
+<body>
+    <div id="view">
+    </div>
+</body>
+<script type='text/javascript' src="scroll.js"></script>
+<script type='text/javascript' src="zepto.js"></script>
+<script type='text/javascript' src="underscore.js"></script>
+<script type='text/javascript' src="tableView.js"></script>
+<script type="text/javascript">
+var data = [
+    { name: 'robi1' },
+    { name: 'Jhon2' },
+    { name: 'Saxi3' },
+    { name: 'Sara4' },
+    { name: 'Wusi5' },
+    { name: 'Wusi6' },
+    { name: 'Wusi7' },
+    { name: 'Wusi8' },
+    { name: 'Wusi9' },
+    { name: 'Wusi1' },
+    { name: 'Wusi2' },
+    { name: 'Wusi3' },
+    { name: 'Wusi4' },
+    { name: 'Wusi5' },
+    { name: 'Wusi6' },
+    { name: 'Wusi7' },
+    { name: 'Wusi8' },
+    { name: 'Wusi9' },
+    { name: 'Wusi1' },
+    { name: 'Wusi2' },
+    { name: 'Wusi3' },
+    { name: 'Wusi4' },
+    { name: 'Wusi5' },
+    { name: 'Wusi6' },
+    { name: 'Wusi7' },
+    { name: 'Wusi8' },
+    { name: 'Wusi9' },
+    { name: 'Wusi1' },
+    { name: 'Wusi2' },
+    { name: 'Wusi3' },
+    { name: 'Wusi4' }
+];
+var template = '<div style="height:<%= height %>;background-color: <%= color %>;">hello: <%= name %></div>'; // template.
+
+var view = window.view = new TableView('#view', {
+    pullRefresh: true,
+    content: {
+        height: 1000
+    },
+    viewport: {
+        height: 400
+    },
+    onSelectItem: function(index, element) {
+        // user select the item.
+    },
+    populateItem: function(index) {
+        var len = data.length;
+        var itemData = data[index % len];
+        if (!itemData) return null;
+        var colors = new Array(3);
+        for (var i = 0; i < colors.length; i++) {
+            colors[i] = Math.round(Math.random() * 255);
+        }
+        var color = 'rgb(' + colors.join(',') + ')';
+        var height = 50 + Math.random() * 50;
+        return _.template(template, {
+            height: height,
+            color: color,
+            name: itemData.name
+        })
+    },
+    populateCount: function() {
+        return data.length;
+    },
+    pullDownAction: function(finish) {
+        var callback = finish || function() {};
+        setTimeout(callback, 1000);
+    }
+});
+</script>
+</html>

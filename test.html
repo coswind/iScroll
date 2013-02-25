@@ -1,0 +1,179 @@
+<html>
+<head>
+    <title>Hi~Testing Now!
+    </title>
+    <link rel="stylesheet" href="scroll.css">
+    <script type='text/javascript' src="scroll.js"></script>
+    <style type="text/css" media="screen">
+
+      body {
+        margin: 0;
+        background-color: #fff;
+        font-family: Helvetica;
+        -webkit-user-select: none;
+      }
+
+      h1 {
+        color: rgb(255,131,4);
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .scroller {
+        display: block;
+        width: 200;
+        height: 400px;
+        float: left;
+        position: relative;
+      }
+
+      .scroller1 {
+        display: block;
+        width: 200;
+        height: 600px;
+        float: right;
+        position: relative;
+      }
+
+      .scroll-view-native {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .x-hosting-layer {
+        height: 2000px !important;
+      }
+
+      .content {
+        height: 50px;
+        background-color: #777;
+        color: black;
+      }
+
+    </style>
+
+    <script>
+
+      /* ==================== Controller ==================== */
+
+      var controller = {};
+
+      controller.init = function () {
+        // enable default scrolling
+        //X.RootViewController.sharedRootViewController.view.disablesDefaultScrolling = false;
+        var grand_scrollview = new Scroll.ScrollView();
+        grand_scrollview.id = 'grandparent';
+        grand_scrollview.size = new Scroll.Size(300, 300);
+        grand_scrollview.contentSize = new Scroll.Size(300, 900);
+        grand_scrollview.position = new Scroll.Point(300, 300);
+        grand_scrollview.hostingLayer.style.backgroundColor = 'yellow';
+        Scroll.RootView.sharedRoot.addSubview(grand_scrollview);
+      };
+
+      /* ==================== Init ==================== */
+
+      function init () {
+        controller.init();
+      }
+
+      window.addEventListener('load', init, false);
+
+    </script>
+
+  </head>
+
+  <body>
+    <div class="scroller">
+    <div class="x-scroll-view">
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+    </div>
+    </div>
+    <div class="scroller1">
+    <div class="x-scroll-view">
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+      <div class="content">div 1</div>
+      <div class="content">div 2</div>
+      <div class="content">div 3</div>
+      <div class="content">div 4</div>
+      <div class="content">div 5</div>
+      <div class="content">div 6</div>
+      <div class="content">div 7</div>
+      <div class="content">div 8</div>
+      <div class="content">div 9</div>
+      <div class="content">div 10</div>
+    </div>
+    </div>
+  </body>
+
+</html>
+</body>
+</html>
